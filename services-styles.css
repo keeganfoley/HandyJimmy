@@ -1,0 +1,407 @@
+/* Services Page Specific Styles */
+
+.services-hero {
+    padding: 140px 0 80px;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-light) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.services-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+}
+
+.services-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, var(--white));
+}
+
+.page-title {
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.page-subtitle {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    position: relative;
+}
+
+/* Detailed Services Section */
+.detailed-services {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.service-detail-card {
+    background: var(--white);
+    border: 2px solid var(--light-gray);
+    border-radius: 20px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    transition: var(--transition);
+    position: relative;
+}
+
+.service-detail-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--primary-blue), var(--accent-green), var(--accent-red));
+}
+
+.service-detail-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-5px);
+}
+
+.service-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+    background: linear-gradient(135deg, var(--light-gray), var(--white));
+}
+
+.service-icon-large {
+    font-size: 64px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+}
+
+.service-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.service-tagline {
+    font-size: 16px;
+    color: var(--medium-gray);
+}
+
+.service-content {
+    padding: 0 40px 30px;
+}
+
+.service-description {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--dark-gray);
+    margin-bottom: 30px;
+}
+
+.service-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: var(--light-gray);
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.service-item:hover {
+    background: linear-gradient(135deg, var(--light-gray), rgba(21, 101, 216, 0.05));
+    transform: translateX(5px);
+}
+
+.check-icon {
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, var(--accent-green), var(--accent-green-light));
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.service-cta {
+    padding: 0 40px 40px;
+}
+
+.service-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(21, 101, 216, 0.3);
+}
+
+.service-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(21, 101, 216, 0.4);
+}
+
+/* Emergency Banner */
+.emergency-banner {
+    margin-top: 60px;
+    background: linear-gradient(135deg, var(--accent-red), var(--accent-red-light));
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.emergency-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.emergency-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.emergency-icon {
+    font-size: 48px;
+    animation: pulse 2s infinite;
+}
+
+.emergency-content h3 {
+    font-size: 28px;
+    color: var(--white);
+    margin-bottom: 5px;
+}
+
+.emergency-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 18px;
+}
+
+.emergency-button {
+    margin-left: auto;
+    padding: 16px 32px;
+    background: var(--white);
+    color: var(--accent-red);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 18px;
+    transition: var(--transition);
+    box-shadow: var(--shadow-md);
+}
+
+.emergency-button:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Service Navigation Pills */
+.service-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 60px;
+    padding: 25px;
+    background: var(--light-gray);
+    border-radius: 15px;
+    position: sticky;
+    top: 90px;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.service-pill {
+    padding: 10px 24px;
+    background: var(--white);
+    border: 2px solid var(--light-gray);
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.service-pill:hover,
+.service-pill.active {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+    color: var(--white);
+    border-color: var(--primary-blue);
+}
+
+/* Floating Action Button */
+.floating-cta {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+    z-index: 900;
+    font-size: 24px;
+}
+
+.floating-cta:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(21, 101, 216, 0.4);
+}
+
+/* Animations */
+.service-detail-card {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.service-detail-card:nth-child(1) { animation-delay: 0.1s; }
+.service-detail-card:nth-child(2) { animation-delay: 0.2s; }
+.service-detail-card:nth-child(3) { animation-delay: 0.3s; }
+.service-detail-card:nth-child(4) { animation-delay: 0.4s; }
+.service-detail-card:nth-child(5) { animation-delay: 0.5s; }
+.service-detail-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Active Navigation Indicator */
+.nav-link.active {
+    color: var(--primary-blue);
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-blue), var(--primary-blue-light));
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 36px;
+    }
+
+    .service-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .service-icon-large {
+        width: 80px;
+        height: 80px;
+        font-size: 48px;
+    }
+
+    .service-content,
+    .service-cta {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .service-list-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .emergency-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .emergency-button {
+        margin-left: 0;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .floating-cta {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .header,
+    .footer,
+    .floating-cta,
+    .emergency-banner {
+        display: none;
+    }
+
+    .service-detail-card {
+        page-break-inside: avoid;
+        border: 1px solid #ddd;
+        margin-bottom: 20px;
+    }
+
+    .services-hero {
+        padding: 40px 0;
+        background: none;
+        color: var(--text-dark);
+    }
+
+    .page-title,
+    .page-subtitle {
+        color: var(--text-dark);
+    }
+}
