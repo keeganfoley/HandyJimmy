@@ -79,7 +79,7 @@ if (testimonials.length > 0) {
     setInterval(nextTestimonial, 5000);
 }
 
-// Form Handling
+// Form Handling with Formspree
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
@@ -93,19 +93,51 @@ if (contactForm) {
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
 
-        // Simulate form submission
-        setTimeout(() => {
-            submitBtn.textContent = 'Message Sent!';
-            submitBtn.style.backgroundColor = '#27ae60';
+        try {
+            // Submit to Formspree
+            const response = await fetch('https://formspree.io/f/mldejpgn', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
 
-            contactForm.reset();
+            if (response.ok) {
+                // Success
+                submitBtn.textContent = 'Message Sent!';
+                submitBtn.style.backgroundColor = '#27ae60';
+                contactForm.reset();
+
+                // Show success message
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.style.backgroundColor = '';
+                    submitBtn.disabled = false;
+                }, 3000);
+            } else {
+                // Error
+                submitBtn.textContent = 'Error - Please Try Again';
+                submitBtn.style.backgroundColor = '#e74c3c';
+
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.style.backgroundColor = '';
+                    submitBtn.disabled = false;
+                }, 3000);
+            }
+        } catch (error) {
+            // Network error
+            console.error('Form submission error:', error);
+            submitBtn.textContent = 'Error - Please Try Again';
+            submitBtn.style.backgroundColor = '#e74c3c';
 
             setTimeout(() => {
                 submitBtn.textContent = originalText;
                 submitBtn.style.backgroundColor = '';
                 submitBtn.disabled = false;
             }, 3000);
-        }, 1500);
+        }
     });
 }
 
