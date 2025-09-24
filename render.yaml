@@ -1,14 +1,6 @@
 services:
   - type: web
     name: handy-jimmy
-    env: static
+    runtime: static
     staticPublishPath: .
     buildCommand: ""
-    headers:
-      - path: /*
-        name: Cache-Control
-        value: public, max-age=3600
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
