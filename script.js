@@ -83,9 +83,6 @@ if (testimonials.length > 0) {
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        const formData = new FormData(contactForm);
         const submitBtn = contactForm.querySelector('.submit-btn');
         const originalText = submitBtn.textContent;
 
@@ -93,51 +90,12 @@ if (contactForm) {
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
 
-        try {
-            // Submit to Formspree
-            const response = await fetch('https://formspree.io/f/mldejpgn', {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            });
-
-            if (response.ok) {
-                // Success
-                submitBtn.textContent = 'Message Sent!';
-                submitBtn.style.backgroundColor = '#27ae60';
-                contactForm.reset();
-
-                // Show success message
-                setTimeout(() => {
-                    submitBtn.textContent = originalText;
-                    submitBtn.style.backgroundColor = '';
-                    submitBtn.disabled = false;
-                }, 3000);
-            } else {
-                // Error
-                submitBtn.textContent = 'Error - Please Try Again';
-                submitBtn.style.backgroundColor = '#e74c3c';
-
-                setTimeout(() => {
-                    submitBtn.textContent = originalText;
-                    submitBtn.style.backgroundColor = '';
-                    submitBtn.disabled = false;
-                }, 3000);
-            }
-        } catch (error) {
-            // Network error
-            console.error('Form submission error:', error);
-            submitBtn.textContent = 'Error - Please Try Again';
-            submitBtn.style.backgroundColor = '#e74c3c';
-
-            setTimeout(() => {
-                submitBtn.textContent = originalText;
-                submitBtn.style.backgroundColor = '';
-                submitBtn.disabled = false;
-            }, 3000);
-        }
+        // Let the form submit naturally to avoid CORS issues
+        // Just add visual feedback
+        setTimeout(() => {
+            submitBtn.textContent = 'Message Sent!';
+            submitBtn.style.backgroundColor = '#27ae60';
+        }, 500);
     });
 }
 
