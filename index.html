@@ -72,14 +72,29 @@
                 <h2>Get a Free Quote</h2>
                 <p>Tell us about your project and we’ll reach out with next steps.</p>
                 <form class="hero-form" action="https://formspree.io/f/xzzjbned" method="POST">
-                    <label for="hero-name">Name</label>
+                    <label for="hero-name">Name *</label>
                     <input type="text" id="hero-name" name="name" placeholder="Your name" required>
 
-                    <label for="hero-contact">Email or Phone</label>
-                    <input type="text" id="hero-contact" name="contact" placeholder="Best way to reach you" required>
+                    <label for="hero-email">Email *</label>
+                    <input type="email" id="hero-email" name="email" placeholder="Your email address" required>
+
+                    <label for="hero-phone">Phone Number *</label>
+                    <input type="tel" id="hero-phone" name="phone" placeholder="Your phone number" required>
+
+                    <label for="hero-service">Service Needed</label>
+                    <select id="hero-service" name="service">
+                        <option value="">Select a service</option>
+                        <option value="General Repairs & Maintenance">General Repairs & Maintenance</option>
+                        <option value="Painting & Finishing">Painting & Finishing</option>
+                        <option value="Carpentry & Woodwork">Carpentry & Woodwork</option>
+                        <option value="Plumbing & Fixtures">Plumbing & Fixtures</option>
+                        <option value="Tile & Flooring">Tile & Flooring</option>
+                        <option value="Outdoor & Seasonal">Outdoor & Seasonal</option>
+                        <option value="Other">Other</option>
+                    </select>
 
                     <label for="hero-message">How can we help?</label>
-                    <textarea id="hero-message" name="message" rows="4" placeholder="Share a few details about your project" required></textarea>
+                    <textarea id="hero-message" name="message" rows="4" placeholder="Share a few details about your project"></textarea>
 
                     <button type="submit" class="hero-submit">Get My Free Quote</button>
                 </form>
@@ -369,37 +384,37 @@
 
                 <form id="contact-form" class="contact-form" action="https://formspree.io/f/xzzjbned" method="POST">
                     <div class="form-group">
-                        <label for="name">Your Name</label>
+                        <label for="name">Your Name *</label>
                         <input type="text" id="name" name="name" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="email">Email *</label>
                         <input type="email" id="email" name="email" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" name="phone">
+                        <label for="phone">Phone *</label>
+                        <input type="tel" id="phone" name="phone" required>
                     </div>
 
                     <div class="form-group">
                         <label for="service">Service Needed</label>
                         <select id="service" name="service">
                             <option value="">Select a service</option>
-                            <option value="general">General Repairs</option>
-                            <option value="painting">Painting</option>
-                            <option value="carpentry">Carpentry</option>
-                            <option value="plumbing">Plumbing</option>
-                            <option value="tile">Tile & Flooring</option>
-                            <option value="outdoor">Outdoor Work</option>
-                            <option value="other">Other</option>
+                            <option value="General Repairs & Maintenance">General Repairs & Maintenance</option>
+                            <option value="Painting & Finishing">Painting & Finishing</option>
+                            <option value="Carpentry & Woodwork">Carpentry & Woodwork</option>
+                            <option value="Plumbing & Fixtures">Plumbing & Fixtures</option>
+                            <option value="Tile & Flooring">Tile & Flooring</option>
+                            <option value="Outdoor & Seasonal">Outdoor & Seasonal</option>
+                            <option value="Other">Other</option>
                         </select>
                     </div>
 
                     <div class="form-group">
                         <label for="message">Project Details</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Please describe your project..." required></textarea>
+                        <textarea id="message" name="message" rows="4" placeholder="Please describe your project..."></textarea>
                     </div>
 
                     <button type="submit" class="submit-btn">Send Message</button>

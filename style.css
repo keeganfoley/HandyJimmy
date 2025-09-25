@@ -320,7 +320,8 @@ p {
 }
 
 .hero-form input,
-.hero-form textarea {
+.hero-form textarea,
+.hero-form select {
     width: 100%;
     padding: 0.9rem 1rem;
     border: 1px solid #d7dde5;
@@ -331,7 +332,8 @@ p {
 }
 
 .hero-form input:focus,
-.hero-form textarea:focus {
+.hero-form textarea:focus,
+.hero-form select:focus {
     outline: none;
     border-color: var(--primary-blue);
     box-shadow: 0 0 0 4px rgba(0, 74, 173, 0.18);

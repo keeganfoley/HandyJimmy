@@ -1,0 +1,149 @@
+# Product Requirements Document (PRD)  
+**Project:** Handy Marty Website  
+**Version:** 1.0  
+**Prepared For:** Handy Marty Handyman Services  
+
+---
+
+## 1. Purpose & Vision  
+The goal of this project is to create a professional, trustworthy, and approachable website for **Handy Marty**. The site should:  
+- Establish brand credibility and highlight Marty’s reliability.  
+- Clearly present all handyman services offered.  
+- Enable customers to **submit job requests easily via a form**.  
+- Showcase testimonials, portfolio photos, and reviews to build trust.  
+- Reflect Handy Marty’s brand personality: **friendly, reliable, skilled, and rooted in family values**.  
+
+---
+
+## 2. Objectives  
+- Provide customers with a **clear list of services** offered.  
+- Collect customer leads through a **mandatory contact/estimate form**.  
+- Showcase credibility with testimonials, reviews, and before/after project photos.  
+- Present Marty’s personal story and brand values.  
+- Improve local discoverability (service areas, SEO-friendly content).  
+
+---
+
+## 3. Scope of Work  
+The website will include the following **pages and sections**:  
+
+### 3.1 Header (Global)  
+- Logo + slogan: **“Big or small, Marty fixes it all.”**  
+- Navigation: Home • Services • About • Gallery • Reviews • FAQ • Contact  
+- Sticky button: **“Request a Free Estimate”** → links to contact form.  
+
+### 3.2 Homepage  
+- Headline + subheadline introducing Handy Marty.  
+- Quick service highlights (6–8 categories).  
+- “Why Choose Handy Marty?” brand pillars.  
+- Mini testimonials (1–2).  
+- CTA button linking to form.  
+
+### 3.3 Services Page  
+- Organized categories:  
+  - General Repairs  
+  - Carpentry & Assembly  
+  - Plumbing  
+  - Electrical  
+  - Painting & Finishing  
+  - Home Improvement  
+  - Outdoor & Seasonal  
+  - Odd Jobs  
+- Closing statement: “Not seeing what you need? Just ask — chances are, I can fix it.”  
+
+### 3.4 About Marty  
+- Short first-person bio.  
+- Core values (trustworthy, friendly, craftsmanship, family).  
+- Tagline: **“Locally trusted. Family values. Quality work.”**  
+
+### 3.5 Gallery / Portfolio  
+- Before-and-after project photos.  
+- Categorized examples (painting, repairs, installations, outdoor work).  
+
+### 3.6 Reviews & Testimonials  
+- At least 3–5 written testimonials.  
+- Option to embed Google/Yelp reviews.  
+
+### 3.7 FAQ  
+- Key questions on pricing, scheduling, insurance, emergency services, and payments.  
+
+### 3.8 Contact & Free Estimate Form  
+- **Required form fields**:  
+  - Full Name  
+  - Email Address  
+  - Phone Number  
+  - What You’re Looking For  
+  - Notes/Job Description  
+- Submit button: **“Request My Free Estimate.”**  
+- Also include:  
+  - Direct phone (click-to-call)  
+  - Email (click-to-email)  
+  - Service area map or city list  
+  - Hours of operation  
+
+### 3.9 Footer (Global)  
+- Quick navigation links.  
+- Service area list (for SEO).  
+- Contact info.  
+- Slogan repeated.  
+- Social media links (if applicable).  
+
+---
+
+## 4. Functional Requirements  
+- **Contact form submissions** should send to Marty’s email.  
+- **Form must be accessible via button** in header and homepage CTA.  
+- Website must be **mobile responsive**.  
+- Load times must be optimized (<3 seconds).  
+- SEO structure: service keywords, local area targeting.  
+
+---
+
+## 5. Non-Functional Requirements  
+- Tone of content must be **first-person, warm, approachable**.  
+- Branding should subtly reference Marty’s Italian heritage.  
+- Website should prioritize clarity over complexity.  
+- All text should reinforce trust and professionalism.  
+
+---
+
+## 6. Success Metrics  
+The website will be considered successful if it:  
+- Receives at least **15–20 form submissions per month** within first 3 months.  
+- Achieves **high engagement time** (>1.5 minutes per visitor).  
+- Generates **positive customer feedback** on usability and clarity.  
+- Ranks for local handyman service keywords in search engines.  
+
+---
+
+## 7. Risks & Assumptions  
+- Risk: Customers may not complete form → Mitigation: keep form short and simple.  
+- Risk: Limited initial testimonials/photos → Mitigation: gather content gradually.  
+- Assumption: Marty is licensed/insured and offers listed services.  
+- Assumption: Marty can provide consistent updates for gallery and reviews.  
+
+---
+
+## 8. Deliverables  
+- Complete website with all sections listed in Scope of Work.  
+- Connected and functional contact/estimate form.  
+- SEO-optimized content for services and locations.  
+- Branded copywriting in Marty’s voice.  
+
+---
+
+## 9. Timeline (Suggested)  
+- Week 1: Content drafting & branding confirmation.  
+- Week 2: Initial website build + form integration.  
+- Week 3: Photo/testimonial collection and upload.  
+- Week 4: Testing, SEO setup, launch.  
+
+---
+
+## 10. Future Enhancements (Out of Scope for v1.0)  
+- Online booking system with calendar integration.  
+- Payment processing or deposits.  
+- Blog/resources section for SEO growth.  
+- Live chat for instant inquiries.  
+
+---
