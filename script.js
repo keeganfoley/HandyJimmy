@@ -80,6 +80,28 @@ if (testimonials.length > 0) {
 }
 
 // Form Handling with Formspree
+const heroQuoteForm = document.querySelector('.hero-form');
+if (heroQuoteForm) {
+    heroQuoteForm.addEventListener('submit', () => {
+        const submitBtn = heroQuoteForm.querySelector('.hero-submit');
+        const originalText = submitBtn.textContent;
+
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+
+        setTimeout(() => {
+            submitBtn.textContent = 'Message Sent!';
+            submitBtn.style.backgroundColor = '#009246';
+        }, 500);
+
+        setTimeout(() => {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+            submitBtn.style.backgroundColor = '';
+        }, 4000);
+    });
+}
+
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
@@ -94,8 +116,14 @@ if (contactForm) {
         // Just add visual feedback
         setTimeout(() => {
             submitBtn.textContent = 'Message Sent!';
-            submitBtn.style.backgroundColor = '#27ae60';
+            submitBtn.style.backgroundColor = '#009246';
         }, 500);
+
+        setTimeout(() => {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+            submitBtn.style.backgroundColor = '';
+        }, 4000);
     });
 }
 

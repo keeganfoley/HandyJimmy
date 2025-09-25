@@ -1,12 +1,14 @@
-/* Handy Jimmy - Professional Craftsman Website */
+/* Handy Jimmy - Professional Handyman Website */
 
 :root {
-    /* Italian-inspired color palette */
+    /* Blue-first palette with red and green accents */
     --primary-blue: #004AAD;
     --primary-blue-light: #0066CC;
     --primary-blue-dark: #003380;
     --accent-red: #CE2B37;
+    --accent-red-dark: #A3222D;
     --accent-green: #009246;
+    --accent-green-light: #E3F2ED;
     --white: #FFFFFF;
     --off-white: #FAFBFC;
     --light-gray: #F4F6F8;
@@ -37,7 +39,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
     color: var(--text-dark);
     background: var(--white);
     line-height: 1.6;
@@ -46,7 +48,7 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     line-height: 1.2;
     color: var(--text-dark);
@@ -114,7 +116,7 @@ p {
 }
 
 .logo-text {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-blue);
@@ -162,6 +164,7 @@ p {
     text-decoration: none;
     font-weight: 600;
     transition: var(--transition-base);
+    box-shadow: 0 10px 20px -12px rgba(0, 74, 173, 0.6);
 }
 
 .cta-button:hover {
@@ -188,9 +191,9 @@ p {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
-    padding: 140px 0 80px;
-    min-height: 100vh;
+    background: url('assets/1.png') center/cover no-repeat;
+    padding: 160px 0 120px;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     position: relative;
@@ -200,32 +203,33 @@ p {
 .hero::before {
     content: '';
     position: absolute;
-    top: 0;
-    right: -50%;
-    width: 150%;
-    height: 100%;
-    background: url('assets/HandyJimmy.png') no-repeat center;
-    background-size: contain;
-    opacity: 0.1;
-    transform: rotate(-15deg);
+    inset: 0;
+    background: linear-gradient(120deg, rgba(0, 74, 173, 0.9) 0%, rgba(0, 74, 173, 0.78) 50%, rgba(0, 51, 128, 0.7) 100%);
+}
+
+.hero-layout {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem;
+    align-items: flex-start;
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 700px;
+    max-width: 620px;
 }
 
 .hero h1 {
-    color: white;
+    color: var(--white);
     margin-bottom: 1.5rem;
     animation: fadeInUp 0.8s ease;
 }
 
 .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     animation: fadeInUp 1s ease;
 }
 
@@ -238,7 +242,7 @@ p {
 
 .btn-primary, .btn-secondary {
     padding: 1rem 2rem;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: 600;
     text-decoration: none;
     transition: var(--transition-base);
@@ -248,19 +252,21 @@ p {
 }
 
 .btn-primary {
-    background: white;
-    color: var(--primary-blue);
+    background: var(--accent-red);
+    color: white;
+    box-shadow: 0 18px 30px -20px rgba(206, 43, 55, 0.85);
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: var(--shadow-xl);
+    box-shadow: 0 22px 38px -18px rgba(206, 43, 55, 0.85);
+    background: var(--accent-red-dark);
 }
 
 .btn-secondary {
     background: transparent;
     color: white;
-    border: 2px solid white;
+    border: 2px solid rgba(255, 255, 255, 0.4);
 }
 
 .btn-secondary:hover {
@@ -268,12 +274,81 @@ p {
     color: var(--primary-blue);
 }
 
+.hero-form-card {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 25px 45px -30px rgba(15, 23, 42, 0.45);
+    max-width: 420px;
+}
+
+.hero-form-card h2 {
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.hero-form-card p {
+    color: var(--medium-gray);
+    margin-bottom: 1.75rem;
+}
+
+.hero-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.hero-form label {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.hero-form input,
+.hero-form textarea {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid #d7dde5;
+    border-radius: 10px;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    background: var(--white);
+}
+
+.hero-form input:focus,
+.hero-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 4px rgba(0, 74, 173, 0.18);
+}
+
+.hero-form textarea {
+    resize: vertical;
+}
+
+.hero-submit {
+    margin-top: 0.5rem;
+    background: var(--accent-red);
+    color: white;
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-base);
+    box-shadow: 0 18px 30px -20px rgba(206, 43, 55, 0.85);
+}
+
+.hero-submit:hover {
+    background: var(--accent-red-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 22px 38px -18px rgba(206, 43, 55, 0.85);
+}
+
 /* Trust Strip */
 .trust-strip {
-    background: var(--light-gray);
-    padding: 2rem 0;
-    border-top: 3px solid;
-    border-image: linear-gradient(90deg, var(--accent-green) 33%, white 33% 66%, var(--accent-red) 66%) 1;
+    background: linear-gradient(90deg, rgba(0, 74, 173, 0.08), rgba(0, 74, 173, 0.02));
+    padding: 2.5rem 0;
+    border-top: 1px solid rgba(0, 74, 173, 0.12);
+    border-bottom: 1px solid rgba(0, 74, 173, 0.12);
 }
 
 .trust-items {
@@ -286,12 +361,34 @@ p {
     display: flex;
     align-items: center;
     gap: 1rem;
+    background: white;
+    padding: 1.25rem 1.5rem;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 74, 173, 0.08);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.trust-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.trust-item strong {
+    display: block;
+    color: var(--primary-blue);
+    margin-bottom: 0.2rem;
+}
+
+.trust-item p {
+    margin: 0;
+    color: var(--medium-gray);
 }
 
 .trust-icon {
     width: 40px;
     height: 40px;
-    color: var(--primary-blue);
+    color: var(--accent-green);
 }
 
 /* About Section */
@@ -439,21 +536,22 @@ p {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5rem;
 }
 
 .gallery-item {
     position: relative;
-    border-radius: 8px;
+    border-radius: 14px;
     overflow: hidden;
     box-shadow: var(--shadow-md);
     transition: var(--transition-base);
     cursor: pointer;
+    aspect-ratio: 4 / 3;
 }
 
 .gallery-item:hover {
-    transform: scale(1.05);
+    transform: translateY(-6px);
     box-shadow: var(--shadow-xl);
 }
 
@@ -462,6 +560,32 @@ p {
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+.gallery-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom right, rgba(0, 74, 173, 0) 40%, rgba(0, 74, 173, 0.65));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+}
+
+.gallery-label {
+    position: absolute;
+    left: 20px;
+    bottom: 16px;
+    padding: 0.4rem 0.9rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--primary-blue);
+    font-weight: 600;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
 }
 
 /* Testimonials */
@@ -600,7 +724,7 @@ p {
 .form-group select:focus {
     outline: none;
     border-color: var(--primary-blue);
-    box-shadow: 0 0 0 3px rgba(0, 74, 173, 0.1);
+    box-shadow: 0 0 0 3px rgba(0, 74, 173, 0.15);
 }
 
 .form-group textarea {
@@ -609,7 +733,7 @@ p {
 }
 
 .submit-btn {
-    background: var(--primary-blue);
+    background: var(--accent-red);
     color: white;
     padding: 1rem 2rem;
     border: none;
@@ -621,14 +745,14 @@ p {
 }
 
 .submit-btn:hover {
-    background: var(--primary-blue-dark);
+    background: var(--accent-red-dark);
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
 }
 
 /* Footer */
 .footer {
-    background: var(--text-dark);
+    background: var(--primary-blue-dark);
     color: white;
     padding: 3rem 0 1.5rem;
 }
@@ -698,6 +822,17 @@ p {
 }
 
 /* Responsive Design */
+
+@media (max-width: 1024px) {
+    .hero-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-form-card {
+        margin-top: 2.5rem;
+    }
+}
+
 @media (max-width: 768px) {
     .menu-toggle {
         display: flex;
@@ -725,12 +860,20 @@ p {
     }
 
     .hero {
-        padding: 120px 0 60px;
+        padding: 130px 0 80px;
     }
 
     .hero-buttons {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
+    }
+
+    .hero-buttons a {
+        justify-content: center;
+    }
+
+    .hero-form-card {
+        padding: 2rem;
     }
 
     .about-grid,
@@ -748,7 +891,7 @@ p {
     }
 
     .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
 
     .trust-items {

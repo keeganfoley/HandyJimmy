@@ -10,7 +10,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
@@ -34,7 +34,7 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#testimonials">Reviews</a></li>
-                    <li><a href="#contact" class="cta-button">Get Quote</a></li>
+                    <li><a href="#hero-quote" class="cta-button">Get Quote</a></li>
                 </ul>
 
                 <button class="menu-toggle" aria-label="Toggle menu">
@@ -48,12 +48,12 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="container">
+        <div class="container hero-layout">
             <div class="hero-content">
                 <h1>Big or Small, Jimmy Fixes It All</h1>
-                <p class="hero-subtitle">Professional handyman services with Italian craftsmanship and American reliability. Your trusted partner for all home improvement needs.</p>
+                <p class="hero-subtitle">Professional handyman services with a commitment to quality, reliability, and friendly service. Your trusted partner for every home improvement project.</p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn-primary">
+                    <a href="#hero-quote" class="btn-primary">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                         </svg>
@@ -66,6 +66,23 @@
                         View Services
                     </a>
                 </div>
+            </div>
+
+            <div id="hero-quote" class="hero-form-card">
+                <h2>Get a Free Quote</h2>
+                <p>Tell us about your project and we’ll reach out with next steps.</p>
+                <form class="hero-form" action="https://formspree.io/f/xzzjbned" method="POST">
+                    <label for="hero-name">Name</label>
+                    <input type="text" id="hero-name" name="name" placeholder="Your name" required>
+
+                    <label for="hero-contact">Email or Phone</label>
+                    <input type="text" id="hero-contact" name="contact" placeholder="Best way to reach you" required>
+
+                    <label for="hero-message">How can we help?</label>
+                    <textarea id="hero-message" name="message" rows="4" placeholder="Share a few details about your project" required></textarea>
+
+                    <button type="submit" class="hero-submit">Get My Free Quote</button>
+                </form>
             </div>
         </div>
     </section>
@@ -113,7 +130,7 @@
             <div class="about-grid">
                 <div class="about-content">
                     <h2>Your Trusted Local Handyman</h2>
-                    <p>With over two decades of experience, Handy Jimmy brings professional craftsmanship and old-world attention to detail to every project. We combine Italian tradition with modern techniques to deliver exceptional results.</p>
+                    <p>With over two decades of experience, Handy Jimmy brings professional craftsmanship and attentive detail to every project. We combine proven techniques with modern tools to deliver dependable results that last.</p>
                     <p>From minor repairs to major renovations, we treat your home with the same care and respect as our own. Our commitment to quality, punctuality, and fair pricing has made us the go-to handyman service in the community.</p>
 
                     <div class="value-cards">
@@ -243,28 +260,28 @@
 
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="assets/8.png" alt="Kitchen renovation">
+                    <img src="assets/8.png" alt="Interior painting in progress">
+                    <span class="gallery-label">Interior Painting</span>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/9.png" alt="Bathroom upgrade">
+                    <img src="assets/9.png" alt="Bathroom renovation details">
+                    <span class="gallery-label">Bathroom Refresh</span>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/11.png" alt="Custom carpentry">
+                    <img src="assets/11.png" alt="Drywall repair and prep work">
+                    <span class="gallery-label">Drywall Repair</span>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/22.png" alt="Exterior painting">
+                    <img src="assets/22.png" alt="Exterior painting tools ready">
+                    <span class="gallery-label">Exterior Painting</span>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/33.png" alt="Deck restoration">
+                    <img src="assets/33.png" alt="Deck maintenance equipment">
+                    <span class="gallery-label">Deck Maintenance</span>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/44.png" alt="Interior renovation">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/55.png" alt="Tile work">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/0.png" alt="Complete remodel">
+                    <img src="assets/44.png" alt="Interior renovation supplies">
+                    <span class="gallery-label">Home Updates</span>
                 </div>
             </div>
         </div>
@@ -397,7 +414,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>Handy Jimmy</h4>
-                    <p>Professional handyman services with Italian craftsmanship and American reliability.</p>
+                    <p>Professional handyman services focused on quality, reliability, and friendly client care.</p>
                     <p>Big or small, Jimmy fixes it all!</p>
                 </div>
 
